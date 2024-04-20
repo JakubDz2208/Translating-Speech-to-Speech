@@ -44,7 +44,7 @@ def main():
             file_name = f"phrase_{idx}.wav"
             output_path = os.path.join(output_dir, file_name)
             try:
-                torchaudio.save(output_path, speech_tensor, 22050)  # Adjust sample rate if needed
+                torchaudio.save(output_path, speech_tensor, 16000)  # Adjust sample rate if needed
                 print(f"Saved speech for phrase {idx}: {output_path}")
             except Exception as e:
                 print(f"Error saving speech for phrase {idx}: {e}")
